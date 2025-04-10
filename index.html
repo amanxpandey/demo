@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kitty Cat Gallery</title>
+  <style>
+    body {
+      background-color: #ffe4e1;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #ff69b4;
+    }
+    img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+      margin-top: 20px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ffb6c1;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff69b4;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🐾 Welcome to Kitty Cat World 🐾</h1>
+  <img id="catImage" src="https://cataas.com/cat" alt="Random Cat">
+  <br>
+  <button onclick="loadNewCat()">Show Another Cat</button>
+
+  <script>
+    function loadNewCat() {
+      const img = document.getElementById('catImage');
+      img.src = 'https://cataas.com/cat?timestamp=' + new Date().getTime(); // Prevent caching
+    }
+  </script>
+
+</body>
+</html>
